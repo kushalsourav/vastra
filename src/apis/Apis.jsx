@@ -9,3 +9,13 @@ export const getCategories = async (setData) => {
         console.log(error)
     };
 };
+
+export const getProducts = async (setData) => {
+    try {
+        await axios.get('/api/products').then((response) => {
+            setData({type:"PRODUCTS", products: response.data.products});
+        });
+    } catch (error) {
+        console.log(error);
+    };
+};

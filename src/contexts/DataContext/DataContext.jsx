@@ -1,10 +1,17 @@
 import { createContext, useContext, useEffect, useReducer } from "react";
 import DataReducer from "../../reducers/DataReducer/DataReducer";
-import { getCategories} from "../../apis/Apis";
+import { getCategories, getProducts} from "../../apis/Apis";
+import { filterBySort } from "../../helperFunctions/helperFunctions";
 
 const initalDataState = {
     category: [],
     accordion: 1,
+    products: [],
+    search: "",
+    filterCategory : {filterChecked: "", filterCategoryName: ""},
+    sort: "",
+    rating: "",
+    range: "",
 };
 const DataContext = createContext();
 
@@ -15,10 +22,13 @@ const DataProvider = ({children}) => {
 
     useEffect(() => {
     getCategories(setData);
+    getProducts(setData);
+    
     },[])
-  
+
+   const filteredData = filterBySort(data.products, data.sort, data.rating, data.range);
     return(
-        <DataContext.Provider value={{data, setData}}>
+        <DataContext.Provider value={{data, setData, filteredData}}>
             {children}
         </DataContext.Provider>
     );

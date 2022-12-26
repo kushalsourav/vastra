@@ -1,0 +1,10 @@
+.card-img {    
+    background-size: cover;
+}
+.card-vertical-sm {
+    gap: 5px !important;
+    margin:10px 0 1.5rem 0;
+}
+.card-title {
+    font-size: 14px
+}
