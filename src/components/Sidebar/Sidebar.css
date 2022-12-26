@@ -1,0 +1,38 @@
+.sidebar {
+    height: 90vh;
+}
+
+.sidebar-filter {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px;
+    height: 100%;
+}
+
+
+input[type="checkbox"],
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+.filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.range-value {
+    display: flex;
+    justify-content: space-between;
+}
+
+.slider {
+    width: 100%;
+}
+
+.categories {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
