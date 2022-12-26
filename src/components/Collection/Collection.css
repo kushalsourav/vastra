@@ -1,0 +1,30 @@
+.collection-container {
+    position: relative;
+}
+.collection {
+    display: grid;
+    grid-template-columns: 150px 150px;
+    grid-template-rows: 150px 150px;
+    gap: 10px;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+.collection-header {
+    font-size: 3rem;
+    font-family: cursive , sans-serif;
+    text-align: center;
+    padding: 4rem;
+}
+.collection-items {
+    background-size: cover;
+    position: relative;
+}
+.collection-name {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    color: #fff
+}

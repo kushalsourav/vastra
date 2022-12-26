@@ -1,4 +1,8 @@
 import { v4 as uuid } from "uuid";
+import men from '../../assets/img/product-1.jpeg';
+import women from '../../assets/img/product-2.jpg';
+import kids from '../../assets/img/product-3.png';
+import sports from '../../assets/img/product-4.jpg';
 
 /**
  * Category Database can be added here.
@@ -8,20 +12,22 @@ import { v4 as uuid } from "uuid";
 export const categories = [
   {
     _id: uuid(),
-    categoryName: "fiction",
-    description:
-      "literature in the form of prose, especially novels, that describes imaginary events and people",
+    image: men,
+    categoryName: "men",
   },
   {
     _id: uuid(),
-    categoryName: "non-fiction",
-    description:
-      "Non-fiction is writing that gives information or describes real events, rather than telling a story.",
+    image:women,
+    categoryName: "women",
   },
   {
     _id: uuid(),
-    categoryName: "horror",
-    description:
-      "Meant to cause discomfort and fear for both the character and readers, horror writers often make use of supernatural and paranormal elements in morbid stories that are sometimes a little too realistic.",
+    image:kids,
+    categoryName: "kids",
+  },
+  {
+    _id: uuid(),
+    image : sports,
+    categoryName: "sports",
   },
 ];

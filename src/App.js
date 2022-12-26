@@ -1,10 +1,13 @@
 import Main from "./router/Main.jsx";
+import ContextProvider from "./contexts/ContextProvider";
 import "./App.css";
 
 function App() {
   return (
     <div>
-   <Main />
+      <ContextProvider>
+           <Main />
+      </ContextProvider>
     </div>
   );
 }
