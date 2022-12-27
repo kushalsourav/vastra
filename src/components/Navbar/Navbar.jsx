@@ -2,7 +2,7 @@ import { Link, useLocation} from "react-router-dom";
 import SearchBar from "../SearchBar/SearchBar";
 import './Navbar.css';
 
-const Navbar = ({filterBySearch, setData}) => {
+const Navbar = ({filterBySearch, setData, login, authDispatch}) => {
   const location = useLocation();
 
     return(
@@ -21,33 +21,35 @@ const Navbar = ({filterBySearch, setData}) => {
                 </div>
             </div>
         <div className="navbar-items">
-            <div>
+        <div>
                 <ul className="navbar-list">
-                <li className="navbar-item navbar-icon">
-
-                  <div className="badge">
-                  <Link to='/Cart' className="navbar-link">
-                    <span className="icon">
-                    <i className="fas fa-shopping-cart"></i>
-                    <span className="status status-num">0</span>
-                    </span>
-                   </Link>
-                  </div>
-                    </li>
-                    <li className="navbar-item navbar-icon">
-                    <div className="badge">
-                       <Link to='/Wishlist' className="navbar-link">
-                    <span className="icon">
-                    <i className="fas fa-heart"></i>
-                    <span className="status status-num">0</span>
-                    </span>
-                   </Link>
-                  </div>
-                    </li>
+                        <li className="navbar-item navbar-icon">
+                            <div className="badge">
+                                <Link to='/Cart' className="navbar-link">
+                                    <span className="icon">
+                                    <i className="fas fa-shopping-cart"></i>
+                                    </span>
+                                  <span className="status status-num">0</span>
+                                </Link>
+                            </div>
+                        </li>
+                        <li className="navbar-item navbar-icon">
+                            <div className="badge">
+                                <Link to='/Wishlist' className="navbar-link">
+                                    <span className="icon">
+                                    <i className="fas fa-heart"></i>
+                                     <span className="status status-num">0</span>
+                                    </span>
+                                </Link>
+                            </div>
+                        </li>
                 </ul>
             </div>
-            <Link to='/Login' className="btn btn-primary"
-            >login</Link>
+            <Link to='/Signin' className="btn btn-primary" onClick={() => 
+            { login && 
+            authDispatch({type:"LOGIN", login:false, token:localStorage.removeItem("token")})}}>
+            {login ? "logout" : "login"}
+            </Link>
         </div>
     </nav>
     </>
