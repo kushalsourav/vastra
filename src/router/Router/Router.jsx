@@ -7,6 +7,7 @@ import SignUp from "../../views/SignUp/SignUp";
 import Cart from "../../pages/Cart/Cart";
 import RequireAuth from '../../contexts/AuthContext/RequireAuth/RequireAuth';
 import Wishlist from "../../pages/Wishlist/Wishlist";
+import UserProfile from "../../pages/UserProfile/UserProfile";
 
 
 const Router = () => {
@@ -21,6 +22,7 @@ const Router = () => {
             <Route path="/Signup" element={<SignUp />} />
             <Route path="/Cart" element={<RequireAuth><Cart /></RequireAuth>} />
             <Route path="/Wishlist" element={<RequireAuth><Wishlist /></RequireAuth>} />
+            <Route path="/Profile" element={<RequireAuth><UserProfile /></RequireAuth>} />
         </Routes>
         </>
     );

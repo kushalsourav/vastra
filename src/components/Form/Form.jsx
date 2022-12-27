@@ -1,16 +1,25 @@
 import { useLocation } from "react-router-dom";
 import Input from "./Input/Input";
-import './Form.css';
+import "./Form.css";
 
 
 const Form = ({setInput,postInput, onHandleSubmit, setPassVisible, passVisible, error}) => {
     const location = useLocation();
     let form;
     switch (location.pathname){
-        case '/Signin':
+        case "/Signin":
             form = <>
                 <Input name="email" placeholder="Enter your email" id="Email" value={setInput.email} postInput={postInput}/> 
                 <Input name="password" setPassVisible={setPassVisible} passVisible={passVisible} placeholder="Enter your password" id="password" value={setInput.password} postInput={postInput} /> 
+            </>
+            break;
+        case "/Profile":
+            form = <>
+                <Input name="address" id="Address" placeholder="Enter the address" postInput={postInput} value={setInput.address} error={error} />
+                <Input name="phoneNumber" id="phoneNumber" placeholder="Enter the your mobile number" postInput={postInput} value={setInput.phoneNumber} error={error}  />
+                <Input name="city" id="City" placeholder="Enter the city" postInput={postInput} value={setInput.city} error={error}  />
+                <Input name="town" id="town" placeholder="Enter the town" postInput={postInput} value={setInput.town}  error={error} />  
+                <Input name="pincode" id="Pincode" placeholder="Enter the pincode" postInput={postInput} value={setInput.pincode} error={error}  />
             </>
             break;
         default:
@@ -32,7 +41,7 @@ const Form = ({setInput,postInput, onHandleSubmit, setPassVisible, passVisible, 
             </div>
         </form>
         </>
-    )
+    );
 };
 
 export default Form;
