@@ -31,7 +31,17 @@ const initalDataState = {
     phoneNumber: "",
     },
     defaultAddress: [],
+    paymentMode: "",
+    orderSummary: {
+      orderDate: "",
+      orderNumber: "",
+      paymentMode: "",
+      deliveryCharge: 500,
+      orderDetails: [],
+    },
+    orderDetails: [],
 };
+
 const DataContext = createContext();
 
 const useData = () => useContext(DataContext);

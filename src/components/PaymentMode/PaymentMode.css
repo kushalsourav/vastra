@@ -1,0 +1,9 @@
+.payment-mode {
+    width: 400px;
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+}
+.payment-description {
+    padding: 10px 0 0 20px;
+    font-size: 14px;
+}

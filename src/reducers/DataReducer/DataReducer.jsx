@@ -36,6 +36,14 @@ const DataReducer = (state, action) => {
                return {...state , addresses: state.addresses.filter((address) => address._id !== action.addressId) , defaultAddress:delete state.defaultAddress };
           case "DEFAULT_ADDRESS" :
                return {...state, defaultAddress: action.defaultAddress};
+          case "PAYMENT_MODE": 
+               return {...state, paymentMode: action.paymentMode};
+          case "ORDER_SUMMARY":
+               return {...state, orderSummary: {...state.orderSummary, orderDate: new Date().toDateString(), orderNumber:Math.floor(Math.random() * 214748), paymentMode: action.paymentMode,
+                    orderDetails: state.orderDetails.concat(state.cartDetails)
+               }};
+          case "RESET_ORDER" : 
+                return {...state ,  orderSummary: { ...state.orderSummary,orderDate: "",orderNumber: "",paymentMode: "",deliveryCharge: 500,orderDetails: []}}
            default:
                return state;
      };

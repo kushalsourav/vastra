@@ -1,0 +1,33 @@
+.checkout {
+    height: 90vh;
+   padding: 30px;
+
+}
+.checkout > .grid-1-2 {
+    grid-template-columns: auto auto;
+}
+.delivery-form >.form-box > .form-control {
+    margin-top: 0;
+    height: 70px
+}
+.delivery-form >.form-box > .form-btn {
+    margin-top: 40px!important;
+}
+.delivery-form {
+    margin: 20px;
+    padding: 20px;
+    width: 500px;
+    height: 80vh;
+}
+
+.delivery-details {
+    display:grid;
+    grid-template-rows: 250px auto 40px;
+    margin: 0 auto;
+}
+.delivery-assets {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+
