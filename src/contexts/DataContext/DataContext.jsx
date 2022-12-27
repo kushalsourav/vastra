@@ -12,6 +12,10 @@ const initalDataState = {
     sort: "",
     rating: "",
     range: "",
+    toast: {
+        toastType: '',
+        toastMessage: ''
+      },
 };
 const DataContext = createContext();
 

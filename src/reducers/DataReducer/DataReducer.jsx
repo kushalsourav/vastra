@@ -18,7 +18,8 @@ const DataReducer = (state, action) => {
                return {...state, rating: action.rating};
           case "RESET" :
                return{...state, rating:"", sort:"", range:"", filterCategory: {...state.filterCategory, filterChecked: ""}};
-
+          case "TOAST":
+               return {...state, toast: {...state.toast , toastType: action.toastType,  toastMessage: action.toastMessage}};
           default:
                return state;
      };
