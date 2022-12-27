@@ -44,7 +44,9 @@ const DataReducer = (state, action) => {
                }};
           case "RESET_ORDER" : 
                 return {...state ,  orderSummary: { ...state.orderSummary,orderDate: "",orderNumber: "",paymentMode: "",deliveryCharge: 500,orderDetails: []}}
-           default:
+          case "RESET_STORE" :
+               return {...state, cart:[], wishlist:[], defaultAddress:[], addresses:[]}
+                default:
                return state;
      };
 };

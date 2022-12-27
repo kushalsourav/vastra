@@ -54,6 +54,7 @@ const Navbar = ({filterBySearch, setData, login, authDispatch, cartItems, wishli
             </div>
             <Link to='/Signin' className="btn btn-primary" onClick={() => 
             { login && 
+            setData({type:"RESET_STORE"})
             authDispatch({type:"LOGIN", payload:false, token:localStorage.removeItem("token")})}}>
             {login ? "logout" : "login"}
             </Link>
