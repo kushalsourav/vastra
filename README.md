@@ -51,7 +51,8 @@
   
 # Installation
    * Clone the repository on local machine
-           https://github.com/kushalsourav/vastra.git
+   
+           <p>https://github.com/kushalsourav/vastra.git</p>
            
            cd vastra
            
