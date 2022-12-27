@@ -19,8 +19,14 @@ const DataReducer = (state, action) => {
           case "RESET" :
                return{...state, rating:"", sort:"", range:"", filterCategory: {...state.filterCategory, filterChecked: ""}};
           case "TOAST":
-               return {...state, toast: {...state.toast , toastType: action.toastType,  toastMessage: action.toastMessage}};
-          default:
+              return {...state, toast: {...state.toast , toastType: action.toastType,  toastMessage: action.toastMessage}};
+          case "CART" :
+               return {...state, cart: action.cart};
+          case "CART_DETAILS" : 
+               return {...state, cartDetails:   state.cart.map(({price, qty, title, _id}) => {
+                    return {subtotal: price * qty , qty , title, _id};
+                })};
+           default:
                return state;
      };
 };

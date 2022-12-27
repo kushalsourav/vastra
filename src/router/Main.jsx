@@ -10,7 +10,13 @@ const {data, setData} = useData();
 const {authState, authDispatch} = useAuth();
     return (
         <>
-        <Navbar filterBySearch={data.search} setData={setData} login={authState.login} authDispatch={authDispatch} />
+        <Navbar 
+          filterBySearch={data.search} 
+          setData={setData} 
+          login={authState.login} 
+          authDispatch={authDispatch}
+          cartItems={data.cart.length >= 1 && data.cart.length}
+        />
         <Router />
         <Toast type={data.toast.toastType} message={data.toast.toastMessage}/>
         </>

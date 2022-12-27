@@ -2,7 +2,7 @@ import { Link, useLocation} from "react-router-dom";
 import SearchBar from "../SearchBar/SearchBar";
 import './Navbar.css';
 
-const Navbar = ({filterBySearch, setData, login, authDispatch}) => {
+const Navbar = ({filterBySearch, setData, login, authDispatch, cartItems}) => {
   const location = useLocation();
 
     return(
@@ -29,7 +29,7 @@ const Navbar = ({filterBySearch, setData, login, authDispatch}) => {
                                     <span className="icon">
                                     <i className="fas fa-shopping-cart"></i>
                                     </span>
-                                  <span className="status status-num">0</span>
+                                    {cartItems && <span className="status status-num">{cartItems}</span> } 
                                 </Link>
                             </div>
                         </li>
