@@ -9,11 +9,10 @@ const Navbar = ({filterBySearch, setData, login, authDispatch, cartItems, wishli
     return(
     <>
     <nav className="navbar">
-        <div className="navbar-title">
+        <Link to="/" className="navbar-title">
             NoVo
-        </div>
+        </Link>
         <div className="navbar-links">
-            <Link to="/"  className="navbar-link"> Home </Link> 
             <Link to="/Products" className="navbar-link">Products</Link>  
         </div>
         <div className="navbar-items">
@@ -59,8 +58,6 @@ const Navbar = ({filterBySearch, setData, login, authDispatch, cartItems, wishli
             {login ? "logout" : "login"}
             </Link>
         </div>
-
-
     </nav>
     </>
     
