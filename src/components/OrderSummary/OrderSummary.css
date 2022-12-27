@@ -1,0 +1,62 @@
+.order-summary {
+    position: relative;
+}
+.order-description {
+    margin: 30px auto;
+    padding-bottom: 20px;
+    font-size: 1.1rem;
+}
+.order-list {
+    margin-top: 15px;
+    font-size: 1rem;
+    list-style-type: none;
+}
+.orders {
+    display: grid;
+    grid-template-rows: 40px auto 30px;
+    position: relative;
+     height: 300px;
+     padding: 10px;
+     margin: 10px auto;
+     width: 350px;
+     box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+}
+
+.order-heading {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    border-bottom: 2px solid var(--color-primary);
+}
+.order-details {
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 0;
+}
+.order-items {
+    overflow-y: scroll;
+    scrollbar-color: rebeccapurple green;
+    scrollbar-width: thin;
+    padding-right: 10px;
+}
+
+.order-items::-webkit-scrollbar{
+    width: 2px;
+  }
+ .order-items::-webkit-scrollbar-thumb {
+    background: var(--color-primary);
+  }
+.order-name {
+    display: flex;
+    gap: 30px;
+}
+.order-title {
+    width: 11rem;
+}
+.order-total {
+    width: 100%;
+display: flex;
+justify-content: space-between;
+ position: absolute;
+ bottom: 0;
+}

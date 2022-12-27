@@ -3,6 +3,7 @@ import Grid14 from '../../components/UI/Grid-1-4/Grid14';
 import WishlistCard from '../../components/WishlistCard/WishlistCard';
 import { useData } from '../../contexts/DataContext/DataContext';
 import useToast from '../../hooks/useToast';
+import NoData from "../../components/NoData/NoData";
 import './Wishlist.css';
 
 const Wishlist = () => {
@@ -12,7 +13,7 @@ const Wishlist = () => {
         <>
         <div className="container">
             <Grid14>
-                {data.wishlist.length === 0 && <p className='isEmpty'>your wishlist is empty</p>}
+                {data.wishlist.length === 0 && <NoData />}
               <WishlistCard  
               wishlist={data.wishlist} 
               checkIsProduct={checkIsProduct}  

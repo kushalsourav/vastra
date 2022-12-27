@@ -5,6 +5,7 @@ import CartCard from "../../components/CartCard/CartCard";
 import CartDetails from "../../components/CartDetails/CartDetails";
 import Grid12 from "../../components/UI/Grid-1-2/Grid12";
 import useToast from "../../hooks/useToast";
+import NoData from "../../components/NoData/NoData"; 
 import "./Cart.css";
 
 
@@ -22,7 +23,7 @@ useEffect(() => {
          <Grid12>
             <div>
             {
-                data.cart.length === 0 && <p className="isEmpty">Your cart is empty</p>
+                data.cart.length === 0 && <NoData />
             }
             <CartCard 
             cart={data.cart} 
