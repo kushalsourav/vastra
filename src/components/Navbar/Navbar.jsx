@@ -2,7 +2,7 @@ import { Link, useLocation} from "react-router-dom";
 import SearchBar from "../SearchBar/SearchBar";
 import './Navbar.css';
 
-const Navbar = ({filterBySearch, setData, login, authDispatch, cartItems}) => {
+const Navbar = ({filterBySearch, setData, login, authDispatch, cartItems, wishlistItems}) => {
   const location = useLocation();
 
     return(
@@ -38,7 +38,7 @@ const Navbar = ({filterBySearch, setData, login, authDispatch, cartItems}) => {
                                 <Link to='/Wishlist' className="navbar-link">
                                     <span className="icon">
                                     <i className="fas fa-heart"></i>
-                                     <span className="status status-num">0</span>
+                                    {wishlistItems && <span className="status status-num">{wishlistItems}</span>}
                                     </span>
                                 </Link>
                             </div>

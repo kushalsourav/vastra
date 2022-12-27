@@ -82,3 +82,42 @@ export const incDecQuantity = async (cartId, type, setData) => {
          console.log(error)
      };
  };
+
+ export const postWishlist = async (product, setData, postToast) => {
+    try {
+        await axios.post('/api/user/wishlist', {product} , {headers: {authorization: localStorage.getItem("token")}}).then((response) => {
+            if(response.status === 201) {
+                getWishlist(setData);
+                postToast("success", "item added to wishlist");
+            };
+        });
+    } catch (error) {
+        console.log(error);
+        if(error.response.status === 500) {
+            postToast("warning", "please sign in ");
+        }
+    };
+};
+
+export const getWishlist = async (setData) => {
+    try {
+        await axios.get('/api/user/wishlist' , {headers: {authorization: localStorage.getItem("token")}}).then((response) => {
+            setData({type:"WISHLIST", wishlist:response.data.wishlist})
+        })
+    } catch (error) {
+        console.log(Error);
+    };
+};
+
+export const deleteWishlist = async (productId,setData, postToast) => {
+    try {
+        await axios.delete(`/api/user/wishlist/${productId}`,{headers: {authorization: localStorage.getItem("token")}}).then((response) => {
+            if(response.status === 200) {
+                getWishlist(setData);
+                postToast("success", "item removed from wishlist");
+            };
+        })
+    } catch (error) {
+        console.log(error);
+    };
+};

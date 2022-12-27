@@ -21,6 +21,9 @@ const ProductCard = ({products, filterBySearch, filterCategory, checkIsProduct, 
                        onClick={() =>{ checkIsProduct(product,"cart",  postToast)}}
                      >Add to Cart</button>
                       <button className="btn btn-secondary-outline btn-large"
+                          onClick={() => {
+                            checkIsProduct(product,"wishlist",  postToast)
+                            }}
                       >Add to wishlist</button>
                       <span className="badge-primary">new</span>
                   </div>
