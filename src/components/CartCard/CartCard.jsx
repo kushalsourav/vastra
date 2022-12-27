@@ -41,6 +41,7 @@ const CartCard = ({cart, deleteProduct, setData, incOrDec,  checkIsProduct, post
                         onClick={() => deleteProduct(cart._id, setData, postToast)}
                         >Remove from cart</button>
                         <button className="btn btn-secondary-outline"
+                            onClick={() => {checkIsProduct(cart, "wishlist", postToast)}}
                         >Move to wishlist</button>
                     </div>
                 </div>

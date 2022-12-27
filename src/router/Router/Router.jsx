@@ -6,6 +6,7 @@ import SignIn from '../../views/SignIn/SignIn'
 import SignUp from "../../views/SignUp/SignUp";
 import Cart from "../../pages/Cart/Cart";
 import RequireAuth from '../../contexts/AuthContext/RequireAuth/RequireAuth';
+import Wishlist from "../../pages/Wishlist/Wishlist";
 
 
 const Router = () => {
@@ -19,6 +20,7 @@ const Router = () => {
             <Route path="/Signin" element={<SignIn />} />
             <Route path="/Signup" element={<SignUp />} />
             <Route path="/Cart" element={<RequireAuth><Cart /></RequireAuth>} />
+            <Route path="/Wishlist" element={<RequireAuth><Wishlist /></RequireAuth>} />
         </Routes>
         </>
     );

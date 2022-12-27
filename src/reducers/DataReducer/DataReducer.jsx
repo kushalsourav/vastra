@@ -26,6 +26,8 @@ const DataReducer = (state, action) => {
                return {...state, cartDetails:   state.cart.map(({price, qty, title, _id}) => {
                     return {subtotal: price * qty , qty , title, _id};
                 })};
+          case "WISHLIST" :
+               return {...state, wishlist: action.wishlist};
            default:
                return state;
      };

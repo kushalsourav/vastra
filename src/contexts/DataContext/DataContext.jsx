@@ -1,6 +1,6 @@
 import { createContext, useContext, useEffect, useReducer } from "react";
 import DataReducer from "../../reducers/DataReducer/DataReducer";
-import { getCategories, getProducts, postCart, incDecQuantity} from "../../apis/Apis";
+import { getCategories, getProducts, postCart, incDecQuantity, postWishlist} from "../../apis/Apis";
 import { filterBySort } from "../../helperFunctions/helperFunctions";
 import { useLocation, useNavigate } from "react-router-dom";
 
@@ -19,6 +19,7 @@ const initalDataState = {
       },
     cart: [],
     cartDetails: [],
+    wishlist: [],
 
 };
 const DataContext = createContext();
@@ -44,7 +45,13 @@ const DataProvider = ({children}) => {
         hasProduct && navigate('/Cart');
         hasProduct && location.pathname === '/Wishlist' && incDecQuantity(product._id, "increment", setData);
         return hasProduct;
-        };
+        }
+        if(type === "wishlist") {
+            const hasProduct =  data.wishlist.some((el) => el._id === product._id);
+            !hasProduct && postWishlist(product, setData, postToast);
+            hasProduct && navigate('/Wishlist');
+            return hasProduct;
+        }
    };
 
    const filteredData = filterBySort(data.products, data.sort, data.rating, data.range);

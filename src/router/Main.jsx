@@ -16,6 +16,7 @@ const {authState, authDispatch} = useAuth();
           login={authState.login} 
           authDispatch={authDispatch}
           cartItems={data.cart.length >= 1 && data.cart.length}
+          wishlistItems={data.wishlist.length >= 1 && data.wishlist.length}
         />
         <Router />
         <Toast type={data.toast.toastType} message={data.toast.toastMessage}/>
