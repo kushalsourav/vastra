@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
 import './ProductCard.css';
-const ProductCard = ({products, filterBySearch, filterCategory}) => {
+const ProductCard = ({products, filterBySearch, filterCategory, checkIsProduct, postToast}) => {
   return(
         <Fragment>{
             products.map((product) => {
@@ -18,6 +18,7 @@ const ProductCard = ({products, filterBySearch, filterCategory}) => {
                               <span className="text-grey">{product.price}</span>
                           </div>
                       <button className="btn btn-primary-outline btn-large" 
+                       onClick={() =>{ checkIsProduct(product,"cart",  postToast)}}
                      >Add to Cart</button>
                       <button className="btn btn-secondary-outline btn-large"
                       >Add to wishlist</button>

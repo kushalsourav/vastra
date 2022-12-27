@@ -4,6 +4,8 @@ import Products from "../../pages/Products/Products";
 import PageNotFound from "../PageNotFound/PageNotFound";
 import SignIn from '../../views/SignIn/SignIn'
 import SignUp from "../../views/SignUp/SignUp";
+import Cart from "../../pages/Cart/Cart";
+import RequireAuth from '../../contexts/AuthContext/RequireAuth/RequireAuth';
 
 
 const Router = () => {
@@ -16,6 +18,7 @@ const Router = () => {
             <Route path="*" element={<PageNotFound />} />
             <Route path="/Signin" element={<SignIn />} />
             <Route path="/Signup" element={<SignUp />} />
+            <Route path="/Cart" element={<RequireAuth><Cart /></RequireAuth>} />
         </Routes>
         </>
     );
