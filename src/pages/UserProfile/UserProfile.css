@@ -1,0 +1,34 @@
+.personal-information {
+    padding: 30px;
+    margin: 0 auto;
+}
+.personal-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 15px;
+}
+.user-email  {
+    font-size: 1.4rem;
+}
+
+.user-name {
+    font-size: 1.25rem;
+}
+.address-header {
+    text-align: center;
+    padding: 5px 0;
+    border: 1px solid #333;
+    border-radius: 5px;
+}
+.address-details {
+    display: grid;
+    grid-template-rows: 35px 200px 35px;
+    margin-top: 40px;
+    height: 270px;
+    width: 300px;
+}
+.address-default {
+    margin-right: 10px;
+}

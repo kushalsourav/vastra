@@ -1,6 +1,7 @@
 import { Link, useLocation} from "react-router-dom";
+import avatar from "../../assets/img/avatar.png";
 import SearchBar from "../SearchBar/SearchBar";
-import './Navbar.css';
+import "./Navbar.css";
 
 const Navbar = ({filterBySearch, setData, login, authDispatch, cartItems, wishlistItems}) => {
   const location = useLocation();
@@ -16,12 +17,19 @@ const Navbar = ({filterBySearch, setData, login, authDispatch, cartItems, wishli
             <Link to="/Products" className="navbar-link">Products</Link>  
         </div>
         <div className="navbar-items">
-                <div className={"nav-form "} style={{display: location.pathname === '/Products' ? "block" : "none"}}>
+                <div className={"nav-form "} style={{display: location.pathname === "/Products" ? "block" : "none"}}>
                     <SearchBar  filterBySearch={filterBySearch} setData={setData}/>
                 </div>
-            </div>
+        </div>
         <div className="navbar-items">
-        <div>
+            { login && 
+                <Link to='/Profile' >
+                    <div className="avatar avatar-quaternary">
+                        <img src={avatar} alt="avatar-quaternary" className="img-responsive img-round nav-img" />
+                    </div>
+                </Link>
+            }
+            <div>
                 <ul className="navbar-list">
                         <li className="navbar-item navbar-icon">
                             <div className="badge">
@@ -47,14 +55,17 @@ const Navbar = ({filterBySearch, setData, login, authDispatch, cartItems, wishli
             </div>
             <Link to='/Signin' className="btn btn-primary" onClick={() => 
             { login && 
-            authDispatch({type:"LOGIN", login:false, token:localStorage.removeItem("token")})}}>
+            authDispatch({type:"LOGIN", payload:false, token:localStorage.removeItem("token")})}}>
             {login ? "logout" : "login"}
             </Link>
         </div>
+
+
     </nav>
     </>
-    )
-}
+    
+    );
+};
 
 export default Navbar;
 

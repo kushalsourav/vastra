@@ -1,3 +1,4 @@
+import {v4 as uuid} from "uuid";
 import { createContext, useContext, useEffect, useReducer } from "react";
 import DataReducer from "../../reducers/DataReducer/DataReducer";
 import { getCategories, getProducts, postCart, incDecQuantity, postWishlist} from "../../apis/Apis";
@@ -14,13 +15,22 @@ const initalDataState = {
     rating: "",
     range: "",
     toast: {
-        toastType: '',
-        toastMessage: ''
+        toastType: "",
+        toastMessage: ""
       },
     cart: [],
     cartDetails: [],
     wishlist: [],
-
+    addresses:[],
+    addressBook: { 
+    _id: uuid(),
+    address: "",
+    pincode: "",
+    town: "",
+    city: "",
+    phoneNumber: "",
+    },
+    defaultAddress: [],
 };
 const DataContext = createContext();
 
@@ -42,14 +52,14 @@ const DataProvider = ({children}) => {
         if(type === "cart") {
         const hasProduct =  data.cart.some((el) => el._id === product._id);
         !hasProduct && postCart(product, setData, postToast);
-        hasProduct && navigate('/Cart');
-        hasProduct && location.pathname === '/Wishlist' && incDecQuantity(product._id, "increment", setData);
+        hasProduct && navigate("/Cart");
+        hasProduct && location.pathname === "/Wishlist" && incDecQuantity(product._id, "increment", setData);
         return hasProduct;
         }
         if(type === "wishlist") {
             const hasProduct =  data.wishlist.some((el) => el._id === product._id);
             !hasProduct && postWishlist(product, setData, postToast);
-            hasProduct && navigate('/Wishlist');
+            hasProduct && navigate("/Wishlist");
             return hasProduct;
         }
    };

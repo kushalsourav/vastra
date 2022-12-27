@@ -7,7 +7,7 @@ const DataReducer = (state, action) => {
           case "PRODUCTS":
                return {...state, products: action.products};
           case "INPUT" : 
-               return {...state, [action.name]: action.input,};
+               return {...state, [action.name]: action.input,addressBook: {...state.addressBook, [action.name]: action.input}};
           case "FILTER" :
                return {...state, filterCategory: {...state.filterCategory , filterChecked: action.filterChecked, filterCategoryName: action.filterCategoryName}}
           case "SORT" :
@@ -28,6 +28,14 @@ const DataReducer = (state, action) => {
                 })};
           case "WISHLIST" :
                return {...state, wishlist: action.wishlist};
+          case "ADDRESS" :
+               return {...state, addresses: state.addresses.concat(action.address)};
+          case "CLEAR_INPUTS" :
+               return {...state, addressBook:{ ...state.addressBook, address: "", pincode: "", phoneNumber: "", city: "", state: ""}};
+          case "REMOVE_ADDRESS" :
+               return {...state , addresses: state.addresses.filter((address) => address._id !== action.addressId) , defaultAddress:delete state.defaultAddress };
+          case "DEFAULT_ADDRESS" :
+               return {...state, defaultAddress: action.defaultAddress};
            default:
                return state;
      };
