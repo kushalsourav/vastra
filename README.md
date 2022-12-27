@@ -52,10 +52,9 @@
 # Installation
    * Clone the repository on local machine
    
-           <p>https://github.com/kushalsourav/vastra.git</p>
+           https://github.com/kushalsourav/vastra.git
            
            cd vastra
-           
    * Install dependencies using package installer
         <p> npm install </p>
      
