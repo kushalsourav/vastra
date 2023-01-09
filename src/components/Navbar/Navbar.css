@@ -25,3 +25,17 @@
     height: 40px !important;
     width: 40px !important;
 }
+@media (max-width: 480px) {
+    .nav-form {
+        display: none !important;
+    }
+}
+
+@media (max-width: 1024px) {
+    .nav-img{
+        top: 10px;
+        height: 2rem !important;
+        width: 2rem !important;
+        margin-left: 10px;
+    }
+}

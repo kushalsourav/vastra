@@ -2,3 +2,12 @@
     height: 90vh;
     overflow-y: scroll;
 }
+
+@media (max-width: 900px) {
+    .products {
+        height: 100%;
+        overflow: hidden;
+        padding: 0 1rem;
+
+    }
+}

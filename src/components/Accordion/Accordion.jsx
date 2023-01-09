@@ -29,7 +29,7 @@ const Accordion = ({accordion, setData , isNext, isPrev}) => {
                     onClick={() => setData({type:"ACCORDION",accordion:-1})} 
                     disabled={isPrev}>
                     <span>
-                        <i className="icon fas fa-arrow-left"></i>
+                        <i className="fas fa-arrow-left"></i>
                     </span>
                     </button>
                     <button 
@@ -37,7 +37,7 @@ const Accordion = ({accordion, setData , isNext, isPrev}) => {
                     onClick={() => setData({type:"ACCORDION",accordion:1})} 
                     disabled={isNext}>
                     <span>
-                        <i className="icon fas fa-arrow-right"></i>
+                        <i className="fas fa-arrow-right"></i>
                     </span>
                     </button>
                 </div>

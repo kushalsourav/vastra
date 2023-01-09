@@ -4,7 +4,6 @@ import WishlistCard from '../../components/WishlistCard/WishlistCard';
 import { useData } from '../../contexts/DataContext/DataContext';
 import useToast from '../../hooks/useToast';
 import NoData from "../../components/NoData/NoData";
-import './Wishlist.css';
 
 const Wishlist = () => {
     const {data, checkIsProduct ,  setData} = useData();

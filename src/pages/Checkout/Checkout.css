@@ -3,9 +3,6 @@
    padding: 30px;
 
 }
-.checkout > .grid-1-2 {
-    grid-template-columns: auto auto;
-}
 .delivery-form >.form-box > .form-control {
     margin-top: 0;
     height: 70px

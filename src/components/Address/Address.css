@@ -1,6 +1,8 @@
 .shipping-address {
     display: grid;
-    grid-template-columns: auto auto ;
+    grid-template-columns: auto;
+    justify-content: center;
+    gap: 2rem;
     height: 200px;
 }
 .card-text {
