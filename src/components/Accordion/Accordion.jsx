@@ -16,8 +16,9 @@ const Accordion = ({accordion, setData , isNext, isPrev}) => {
                                 <span>offer</span>
                             </div>
                             <p className="text-primary">{accordion.categoryName}</p>
-                            <Link to="/Products" className="btn btn-secondary-outline"
-                            >Shop now!</Link>
+                            <Link to="/Products"
+                            ><button  className="btn btn-secondary-outline" 
+                            onClick={(e) => setData({type:"FILTER" ,filterChecked: true, filterCategoryName:accordion.categoryName}) }>Shop now!</button></Link>
                         </div>
                     </div>
                     </div>

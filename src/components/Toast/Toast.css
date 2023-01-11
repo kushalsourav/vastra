@@ -2,6 +2,7 @@
     position: absolute;
     top: 20%;
     right: 5%;
+    z-index: 9999;
 }
 .toast-{
     display: none;

@@ -1,12 +1,12 @@
 .cart-details {
     display: grid;
-    grid-template-columns: 100px 1fr 1fr;
+    grid-template-columns: 6.25rem 1fr 1fr;
     justify-content: space-between;
     gap: 1rem;
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
 
 }
 .cart-quantity {
-    margin-left: 30px;
+    margin-left: 1.875rem;
     margin-right: 0;
 }

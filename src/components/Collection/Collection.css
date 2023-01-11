@@ -1,15 +1,10 @@
-.collection-container {
-    position: relative;
-}
 .collection {
+    width: 50%;
     display: grid;
-    grid-template-columns: 150px 150px;
-    grid-template-rows: 150px 150px;
+    grid-template-columns: 9.375rem 9.375rem;
+    grid-template-rows: 9.375rem 9.375rem;
     gap: 10px;
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, 50%);
+    margin: 0 auto;
 }
 .collection-header {
     font-size: 3rem;
@@ -27,4 +22,17 @@
     left: 50%;
     transform: translate(-50%, 50%);
     color: #fff
+}
+
+@media (max-width: 480px) {
+    .grid-1-2 {
+        grid-template-columns: auto !important;
+    }
+    .collection-container {
+        width: 18.75rem;
+    }
+    .collection {
+        grid-template-columns: 5rem 5rem;
+        grid-template-rows: 5rem 5rem ;
+    }
 }

@@ -1,25 +1,25 @@
 .checkout {
     height: 90vh;
-   padding: 30px;
+   padding: 1.875rem;
 
 }
 .delivery-form >.form-box > .form-control {
     margin-top: 0;
-    height: 70px
+    height: 4.375rem
 }
 .delivery-form >.form-box > .form-btn {
-    margin-top: 40px!important;
+    margin-top: 2.5rem !important;
 }
 .delivery-form {
-    margin: 20px;
-    padding: 20px;
-    width: 500px;
+    margin: 1.25rem;
+    padding: 1.25rem;
+    width: 31.25rem;
     height: 80vh;
 }
 
 .delivery-details {
     display:grid;
-    grid-template-rows: 250px auto 40px;
+    grid-template-rows: 15.625rem auto 2.5rem;
     margin: 0 auto;
 }
 .delivery-assets {

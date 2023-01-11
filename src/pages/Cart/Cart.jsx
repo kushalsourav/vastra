@@ -6,7 +6,6 @@ import CartDetails from "../../components/CartDetails/CartDetails";
 import Grid12 from "../../components/UI/Grid-1-2/Grid12";
 import useToast from "../../hooks/useToast";
 import NoData from "../../components/NoData/NoData"; 
-import "./Cart.css";
 
 
 const Cart = () => {

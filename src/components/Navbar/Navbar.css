@@ -8,7 +8,7 @@
 }
 .nav-form {
     position: relative;
-    width: 300px;
+    width: 18.75rem;
 }
  .nav-icon {
     position: absolute;
@@ -22,20 +22,30 @@
 .nav-img{
     top: 5px;
     position: absolute;
-    height: 40px !important;
-    width: 40px !important;
+    height: 2.5rem !important;
+    width: 2.5rem !important;
 }
-@media (max-width: 480px) {
-    .nav-form {
-        display: none !important;
-    }
-}
-
 @media (max-width: 1024px) {
     .nav-img{
         top: 10px;
         height: 2rem !important;
         width: 2rem !important;
         margin-left: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-form {
+        display: none !important;
+    }
+    .navbar-list {
+       margin: 0 0 !important;
+    }
+    .navbar-items > .btn {
+        font-size: 10px ;
+        padding: 6px 10px;
+    }
+    .navbar-link > .icon {
+        font-size: 1.5rem;
     }
 }

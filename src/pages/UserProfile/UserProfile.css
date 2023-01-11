@@ -1,5 +1,5 @@
 .personal-information {
-    padding: 30px;
+    padding: 1.875rem;
     margin: 0 auto;
 }
 .personal-details {
@@ -24,11 +24,21 @@
 }
 .address-details {
     display: grid;
-    grid-template-rows: 35px 200px 35px;
-    margin-top: 40px;
-    height: 270px;
-    width: 300px;
+    grid-template-rows: 2.18rem 12.5rem 2.18rem;
+    margin-top: 2.5rem;
+    height: 16.875rem;
+    width: 18.75rem;
 }
 .address-default {
     margin-right: 10px;
+}
+
+@media (max-width: 480px) {
+    .personal-information {
+        width: 18.75rem;
+        padding: 1rem;
+    }
+    .address-details {
+        width: 100%;
+    }
 }

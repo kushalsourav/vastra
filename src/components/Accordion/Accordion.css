@@ -1,7 +1,7 @@
 .accordion {
     position: relative;
     padding: 1.25rem;
-    width: 80%;
+    width: 28.125rem;
     margin: 0 auto;
 }
 
@@ -70,9 +70,18 @@
 }
 
 @media (max-width: 480px) {
+    .accordion {
+        width: 18rem;
+    }
+    .accordion-content {
+        height: 25rem;
+    }
     .overlay {
         height: 20rem;
         width: 15rem;
+    }
+    .overlay-head {
+        font-size: 3rem;
     }
     .float {
         width: 1.5rem;

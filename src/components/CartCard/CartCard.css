@@ -1,0 +1,17 @@
+@media (max-width:480px) {
+    .card-horizontal-lg {
+        width: 100% !important;
+         grid-template-columns: 9.375rem 8.75rem!important;
+    }
+    .card-abt {
+      width: 100%;
+    }
+    .card-horizontal-lg > .card-abt > .card-links > .btn {
+        font-size: 10px;
+        padding: 5px 8px;
+        width: 7.5rem;
+    }
+    .card-head {
+        width: 6.25rem;
+    }
+}
