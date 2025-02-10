@@ -10,7 +10,7 @@ const Navbar = ({filterBySearch, setData, login, authDispatch, cartItems, wishli
     <>
     <nav className="navbar">
         <Link to="/" className="navbar-title">
-            NoVo
+            Vastra
         </Link>
         <div className="navbar-links">
             <Link to="/Products" className="navbar-link">Products</Link>  
